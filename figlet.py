@@ -22,7 +22,8 @@ if israndom == False:
     figlet.setFont(font=sys.argv[2])
 
 
-print(f"Output: "(figlet.renderText(x)))
+print(f"Output: {figlet.renderText(x)}")
+
 
     
 
