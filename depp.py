@@ -1,9 +1,9 @@
-x =input("What is the Great Question of Life, the Universe, and every thing? ")
-if x.strip()== "42":
+answer = input("What is the Answer to the Great Question of life, the Universe, and Everything? ")
+if answer == ("42") :
+    print("Yse")
+
+elif answer.lower().strip() == ("forty two") or  ("forty-two") :
     print("Yes")
-elif x.strip().lower() == ("forty-two"):
-    print ("yes")
-elif x.lower().strip() == ("forty two"):
-    print ("yes")
 else:
-    print ("no")
+    print("no")
+
