@@ -1,3 +1,9 @@
+'''
+In a file called bitcoin.py, implement a program that:
+
+Expects the user to specify as a command-line argument the number of Bitcoins, , that they would like to buy.
+If that argument cannot be converted to a float, the program should exit via sys.exit with an error message.
+'''
 import sys
 import requests
 
