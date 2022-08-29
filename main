@@ -1,0 +1,15 @@
+#this is the programe for show the wether inthis second
+
+import requests
+import sys
+import json
+
+api_key = "d4a8834f3edf490838e56c888642caf2" 
+city = (sys.argv[1])
+city_data = requests.get(
+     f"https://api.openweathermap.org/data/2.5/weather?q={city}&units=imperial&APPID={api_key}")
+
+
+temp = city_data.json() ['main']['temp']
+temprature = (temp - 32) / 1.8
+print(round((temprature)))
