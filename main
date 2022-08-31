@@ -1,0 +1,21 @@
+import requests
+import sys
+import json
+
+if   len(sys.argv) == 2 :
+    city = sys.argv[1]
+else:
+     sys.exit("Please inter the city")
+for i in range(len(city)):   
+     api_key = "d4a8834f3edf490838e56c888642caf2" 
+     city_data = requests.get(
+     f"https://api.openweathermap.org/data/2.5/weather?q={city}&units=imperial&APPID={api_key}")
+
+if  city_data.json()['cod'] == '404':
+     print("No city found")
+
+else:
+     temp = city_data.json() ['main']['temp']
+
+     temprature = (temp - 32) / 1.8
+     print(round((temprature)))
