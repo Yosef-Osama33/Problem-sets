@@ -5,27 +5,19 @@ time as #:## or ##:##. And assume that each meal’s time range is inclusive. Fo
 whether it’s 7:00, 7:01, 7:59, or 8:00, or anytime in between, it’s time for breakfast.
 '''
 def main():
-    x =input(("What time is it? "))
-    time = convert (x)
-    if 8 >=(time)>= 7:
+    time_input= input("What time is it? ")
+    result = convert(time_input)
+    if 7<=result<=8:
         print("breakfast time")
-    elif 13>=(time)>=12:
-        print ("lunch time")
-    elif 19>=(time)>=18:
+    elif 12<=result<=13:
+        print("lunch time")
+    elif 18<=result<=19:
         print("dinner time")
-
-    else:
-        print("")
-
-
-
+        
 def convert(time):
-    c, z = time.split(":")
-    hours = (c)
-    minutes = float(z) /60
+    hours, minutes = time.split(":")
+    minutes= float(minutes)/60
     return minutes + float(hours)
-
-
 
 if __name__ == "__main__":
     main()
