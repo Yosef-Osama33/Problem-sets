@@ -6,17 +6,15 @@ output how many cents in change the user is owed. Assume that the user will only
 and ignore any integer that isn’t an accepted denomination.
 '''
 amount = 50
-while amount > 0:
+
+while amount >0:
     print(f"Amount Due: {amount}")
+    insert = int(input("Insert coin: "))
+    if insert == 25 or 15 or 10:
+        (amount) -= (insert)
 
-    coin = int(input("Insert coin: "))
+    else:
+        print(amount)
 
-    if coin in [5, 15, 25]:
-        amount = amount - coin
-
-
-owed =  abs(amount)
-print(f"Change Owed: {owed}")
-
-
-
+    if amount<0 :
+        print(f"Change Owned: {amount})
