@@ -4,19 +4,29 @@ and then outputs the number of calories in one portion of that fruit, per the FD
 which is also available as text. Capitalization aside, assume that users will input fruits exactly as written in the poster
 (e.g., strawberries, not strawberry). Ignore any input that isn’t a fruit.
 '''
-fruits = {
-    "apple" : 130 ,
-    "banana" : 110 ,
-    "avocado" : 50 ,
-    "sweet cherries" : 100
+calories ={"apple": 130,
+"avocado":50,
+"banana":110,
+"cantaloupe":60,
+"Grapefruit":60,
+"grapes":90,
+"Honeydew melon":50,
+"Kiwifruit":90,
+"lemon":15,
+"nectarine":60,
+"orange":80,
+"peach":60,
+"pear":100,
+"pine apple":50,
+"plums":70,
+"Strawberries":50,
+"sweet cherries":100,
+"water melon":80,
+"tangerine":50
 }
 
 
-
-fruit =input("Item: ")
-
-
-for s in fruits:
-    if s == fruit:
-
-        print("calories: " , fruits[s])
+fruits =input("Item: ").lower()
+for fruit in calories:
+    if fruit == fruits:
+        print("Calories: ",calories[fruits] )
